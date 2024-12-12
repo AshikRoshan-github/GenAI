@@ -114,11 +114,5 @@ Output: A dictionary containing the extracted information, structured according 
 
 Architecture Diagram:
 
-+------------+    +--------------+    +--------------+    +---------+    +-----------------+    +--------------+
-| Load Web  |--->| Extract <tr> |--->| Split Text  |--->| Define  |--->| Extract Info  |--->| Extracted   |
-| Page      |    | Tags        |    | Chunks      |    | Schema  |    | (LLM)       |    | Data        |
-|           |    |            |    |            |    +---------+    +-----------------+    +--------------+
-|           |    +--------------+    +--------------+                      |
-|  Input:   |       Input: Docs      Input: Docs    |                       Input: HTML Chunk,
-|    URL    |                                         |                                Schema     
-+------------+                                         
+![image](https://github.com/user-attachments/assets/b580e41a-549c-4798-8d97-80fd21d70fa5)
+                              
