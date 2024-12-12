@@ -67,5 +67,5 @@ Output: Streamlit display of analysis results and messages.
 
 Architecture Diagram:
 
-![image](https://github.com/user-attachments/assets/fe51bab4-dc5e-4a63-9fd5-56b2315d996a)
+![image](https://github.com/user-attachments/assets/d3d428ea-6f7d-435b-9926-e08edf0e269e)
 
