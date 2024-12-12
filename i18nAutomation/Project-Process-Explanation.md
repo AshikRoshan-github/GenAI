@@ -1,3 +1,5 @@
+PL/SQL-internationalization:
+
 The code implements a process for extracting and analyzing error messages from PL/SQL procedures and enriching them with schema information. Here's a breakdown of the architecture:
 
 1. File Upload and Replacement (Streamlit):
@@ -75,3 +77,5 @@ Output: Excel file and Streamlit display of the results.
 Architecture Diagram (Simplified):
 
 ![image](https://github.com/user-attachments/assets/6b1fdc4e-01b8-4d74-b4ec-7b565d9d0e9b)
+
+HTML-internationalization:
