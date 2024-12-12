@@ -1,0 +1,21 @@
+HK_H_SALESWORKER,NUMBEROFINVOICES,SOURCESYSTEM_ID,SOURCESYSTEMWORKERID,EMPLOYEENAME,EMPLOYEEDISPLAYNAME,EMPLOYEEREGION,REGION,TERRITORY,EMPLOYEETERRITORY,EMPLOYEEDIVISION,EMPLOYEEMAINBRANCH,REPORTSTODISPLAYNAME,REPORTSTO
+1,10,1,W001,John Doe,John,North,Region1,Territory1,Territory2,DivisionA,Branch1,Manager A,MGR001
+2,15,2,W002,Alice Brown,Alice,West,Region2,Territory2,Territory3,DivisionB,Branch2,Manager B,MGR002
+3,12,3,W003,Robert White,Robert,East,Region1,Territory3,Territory4,DivisionA,Branch1,Manager C,MGR003
+4,18,1,W004,Emily Davis,Emily,South,Region3,Territory4,Territory5,DivisionC,Branch3,Manager D,MGR004
+5,20,2,W005,Michael Johnson,Michael,North,Region1,Territory5,Territory6,DivisionB,Branch2,Manager E,MGR005
+6,25,3,W006,Jessica Miller,Jessica,West,Region2,Territory6,Territory7,DivisionC,Branch1,Manager F,MGR006
+7,30,1,W007,David Wilson,David,East,Region3,Territory1,Territory8,DivisionA,Branch3,Manager G,MGR007
+8,22,2,W008,Olivia Clark,Olivia,South,Region1,Territory8,Territory9,DivisionB,Branch2,Manager H,MGR008
+9,35,3,W009,James Hall,James,North,Region2,Territory9,Territory10,DivisionC,Branch3,Manager I,MGR009
+10,28,1,W010,Isabella Lewis,Isabella,West,Region3,Territory10,Territory1,DivisionA,Branch1,Manager J,MGR010
+11,40,2,W011,Ethan Harris,Ethan,East,Region1,Territory2,Territory3,DivisionB,Branch2,Manager K,MGR011
+12,32,3,W012,Sophia Martin,Sophia,South,Region2,Territory3,Territory4,DivisionC,Branch1,Manager L,MGR012
+13,24,1,W013,William Garcia,William,North,Region3,Territory4,Territory5,DivisionA,Branch3,Manager M,MGR013
+14,36,2,W014,Ava Rodriguez,Ava,West,Region1,Territory5,Territory6,DivisionB,Branch2,Manager N,MGR014
+15,44,3,W015,Benjamin Martinez,Benjamin,East,Region2,Territory6,Territory7,DivisionC,Branch3,Manager O,MGR015
+16,38,1,W016,Charlotte Hernandez,Charlotte,South,Region3,Territory7,Territory8,DivisionA,Branch1,Manager P,MGR016
+17,26,2,W017,Alexander Lopez,Alexander,North,Region1,Territory8,Territory9,DivisionB,Branch2,Manager Q,MGR017
+18,29,3,W018,Amelia Gonzalez,Amelia,West,Region2,Territory9,Territory10,DivisionC,Branch3,Manager R,MGR018
+19,48,1,W019,Elijah Perez,Elijah,East,Region3,Territory10,Territory1,DivisionA,Branch1,Manager S,MGR019
+20,50,3,W020,Jane Smith,Jane,South,Region3,Territory5,Territory6,DivisionB,Branch3,Manager T,MGR020

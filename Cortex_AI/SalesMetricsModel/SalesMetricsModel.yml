@@ -1,0 +1,659 @@
+name: SalesMetricsModel
+tables:
+  - name: dim_customer
+    description: Customer dimension table with unique customer attributes.
+    base_table:
+      database: cortex_analyst_demo
+      schema: salesmetricsmodel_schema
+      table: dim_customer
+    primary_key:
+      columns:
+        - hk_h_customer
+    dimensions:
+      - name: hk_h_customer
+        expr: hk_h_customer
+        data_type: number
+      - name: sourcesystem_id
+        expr: sourcesystem_id
+        data_type: number
+      - name: customerid
+        expr: customerid
+        data_type: number
+      - name: customername
+        expr: customername
+        data_type: varchar
+      - name: customertype
+        expr: customertype
+        data_type: varchar
+      - name: address1
+        expr: address1
+        data_type: varchar
+      - name: city
+        expr: city
+        data_type: varchar
+      - name: state
+        expr: state
+        data_type: varchar
+      - name: zip
+        expr: zip
+        data_type: varchar
+      - name: country
+        expr: country
+        data_type: varchar
+      - name: phone
+        expr: phone
+        data_type: varchar
+      - name: fax
+        expr: fax
+        data_type: varchar
+      - name: terms
+        expr: terms
+        data_type: number
+      - name: customerwebsite
+        expr: customerwebsite
+        data_type: varchar
+      - name: customerstatus
+        expr: customerstatus
+        data_type: varchar
+      - name: billtocustname
+        expr: billtocustname
+        data_type: varchar
+      - name: billtoaddr1
+        expr: billtoaddr1
+        data_type: varchar
+      - name: billtoaddr2
+        expr: billtoaddr2
+        data_type: varchar
+      - name: billtocity
+        expr: billtocity
+        data_type: varchar
+      - name: billtostate
+        expr: billtostate
+        data_type: varchar
+      - name: billtozip
+        expr: billtozip
+        data_type: varchar
+      - name: billtocountry
+        expr: billtocountry
+        data_type: varchar
+      - name: axcustomerid
+        expr: axcustomerid
+        data_type: number
+      - name: axinvoicecustid
+        expr: axinvoicecustid
+        data_type: number
+      - name: location
+        expr: location
+        data_type: varchar
+      - name: hubrecordsource
+        expr: hubrecordsource
+        data_type: varchar
+
+  - name: dim_invoice
+    description: Invoice dimension table with unique invoice attributes.
+    base_table:
+      database: cortex_analyst_demo
+      schema: salesmetricsmodel_schema
+      table: dim_invoice
+    primary_key:
+      columns:
+        - hk_h_invoice
+    dimensions:
+      - name: hk_h_invoice
+        expr: hk_h_invoice
+        data_type: number
+      - name: sourcesystem_id
+        expr: sourcesystem_id
+        data_type: number
+      - name: revisionid
+        expr: revisionid
+        data_type: number
+      - name: invoicecode
+        expr: invoicecode
+        data_type: varchar
+      - name: invoicedate
+        expr: invoicedate
+        data_type: date
+      - name: customerid
+        expr: customerid
+        data_type: number
+      - name: amount
+        expr: amount
+        data_type: float
+      - name: hubrecordsource
+        expr: hubrecordsource
+        data_type: varchar
+      - name: invoiceid
+        expr: invoiceid
+        data_type: varchar
+      - name: invoice_amount
+        expr: invoice_amount
+        data_type: float
+
+  - name: v_salesdashboard_customhealthtab
+    description: Sales dashboard custom health tab with invoice and sales information.
+    base_table:
+      database: cortex_analyst_demo
+      schema: salesmetricsmodel_schema
+      table: v_salesdashboard_customhealthtab
+    primary_key:
+      columns:
+        - hk_h_fact
+    dimensions:
+      - name: hk_h_fact
+        expr: hk_h_fact
+        data_type: number
+      - name: hk_h_customer
+        expr: hk_h_customer
+        data_type: number
+      - name: hk_h_invoice
+        expr: hk_h_invoice
+        data_type: number
+      - name: hk_h_salesworker
+        expr: hk_h_salesworker
+        data_type: number
+      - name: hk_h_worker
+        expr: hk_h_worker
+        data_type: number
+      - name: hk_h_sourcesystem
+        expr: hk_h_sourcesystem
+        data_type: number
+      - name: hk_h_generator
+        expr: hk_h_generator
+        data_type: number
+      - name: invoicedate
+        expr: invoicedate
+        data_type: date
+      - name: amount
+        expr: amount
+        data_type: float
+      - name: invoice_amount
+        expr: invoice_amount
+        data_type: float
+
+  - name: dim_generator
+    description: Generator dimension table with unique generator attributes.
+    base_table:
+      database: cortex_analyst_demo
+      schema: salesmetricsmodel_schema
+      table: dimgenerator
+    primary_key:
+      columns:
+        - hk_h_generator
+    dimensions:
+      - name: hk_h_generator
+        expr: hk_h_generator
+        data_type: number
+      - name: epanumber
+        expr: epanumber
+        data_type: varchar
+      - name: generatorid
+        expr: generatorid
+        data_type: number
+      - name: generatorname
+        expr: generatorname
+        data_type: varchar
+      - name: hubrecordsource
+        expr: hubrecordsource
+        data_type: varchar
+      - name: loccode
+        expr: loccode
+        data_type: varchar
+      - name: sourcesystem_id
+        expr: sourcesystem_id
+        data_type: number
+      - name: status
+        expr: status
+        data_type: varchar
+      - name: type
+        expr: type
+        data_type: varchar
+
+  - name: dim_salesworker
+    description: Salesworker dimension table with unique salesworker attributes.
+    base_table:
+      database: cortex_analyst_demo
+      schema: salesmetricsmodel_schema
+      table: dimsalesworker
+    primary_key:
+      columns:
+        - hk_h_salesworker
+    dimensions:
+      - name: hk_h_salesworker
+        expr: hk_h_salesworker
+        data_type: number
+      - name: numberofinvoices
+        expr: numberofinvoices
+        data_type: number
+      - name: sourcesystem_id
+        expr: sourcesystem_id
+        data_type: number
+      - name: sourcesystemworkerid
+        expr: sourcesystemworkerid
+        data_type: varchar
+      - name: employeename
+        expr: employeename
+        data_type: varchar
+      - name: employeedisplayname
+        expr: employeedisplayname
+        data_type: varchar
+      - name: employeeregion
+        expr: employeeregion
+        data_type: varchar
+      - name: region
+        expr: region
+        data_type: varchar
+      - name: territory
+        expr: territory
+        data_type: varchar
+      - name: employeeterritory
+        expr: employeeterritory
+        data_type: varchar
+      - name: employeedivision
+        expr: employeedivision
+        data_type: varchar
+      - name: employeemainbranch
+        expr: employeemainbranch
+        data_type: varchar
+      - name: reportstodisplayname
+        expr: reportstodisplayname
+        data_type: varchar
+      - name: reportsto
+        expr: reportsto
+        data_type: varchar
+
+  - name: dim_sourcesystem
+    description: Source System dimension table with unique source system attributes.
+    base_table:
+      database: cortex_analyst_demo
+      schema: salesmetricsmodel_schema
+      table: dimsourcesystem
+    primary_key:
+      columns:
+        - hk_h_sourcesystem
+    dimensions:
+      - name: hk_h_sourcesystem
+        expr: hk_h_sourcesystem
+        data_type: number
+      - name: sourcesystem
+        expr: sourcesystem
+        data_type: varchar
+
+  - name: dim_worker
+    description: Worker dimension table with unique worker attributes.
+    base_table:
+      database: cortex_analyst_demo
+      schema: salesmetricsmodel_schema
+      table: dimworker
+    primary_key:
+      columns:
+        - hk_h_worker
+    dimensions:
+      - name: hk_h_worker
+        expr: hk_h_worker
+        data_type: number
+      - name: sourcesystem_id
+        expr: sourcesystem_id
+        data_type: number
+      - name: workerid
+        expr: workerid
+        data_type: number
+      - name: workercode
+        expr: workercode
+        data_type: varchar
+      - name: username
+        expr: username
+        data_type: varchar
+      - name: workername
+        expr: workername
+        data_type: varchar
+      - name: securusername
+        expr: securusername
+        data_type: varchar
+      - name: employeehrsystem
+        expr: employeehrsystem
+        data_type: varchar
+      - name: employeeid
+        expr: employeeid
+        data_type: number
+      - name: employeename
+        expr: employeename
+        data_type: varchar
+      - name: employeefirstname
+        expr: employeefirstname
+        data_type: varchar
+      - name: employeelastname
+        expr: employeelastname
+        data_type: varchar
+      - name: employeedisplayname
+        expr: employeedisplayname
+        data_type: varchar
+      - name: employeeemail
+        expr: employeeemail
+        data_type: varchar
+      - name: employeetitle
+        expr: employeetitle
+        data_type: varchar
+      - name: employeeregion
+        expr: employeeregion
+        data_type: varchar
+      - name: employeeterritory
+        expr: employeeterritory
+        data_type: varchar
+      - name: employeedivision
+        expr: employeedivision
+        data_type: varchar
+      - name: employeemainbranch
+        expr: employeemainbranch
+        data_type: varchar
+      - name: reportstohrsystem
+        expr: reportstohrsystem
+        data_type: varchar
+      - name: reportstoemployeeid
+        expr: reportstoemployeeid
+        data_type: number
+      - name: reportstoname
+        expr: reportstoname
+        data_type: varchar
+      - name: reportstodisplayname
+        expr: reportstodisplayname
+        data_type: varchar
+      - name: hubrecordsource
+        expr: hubrecordsource
+        data_type: varchar
+
+  - name: DIMDATE
+    description: Date dimension table with detailed date attributes.
+    base_table:
+      database: cortex_analyst_demo
+      schema: salesmetricsmodel_schema
+      table: DIMDATE
+    primary_key:
+      columns:
+        - datekey
+    dimensions:
+      - name: datekey
+        expr: datekey
+        data_type: number
+      - name: fulldate
+        expr: fulldate
+        data_type: date
+      - name: year
+        expr: year
+        data_type: number
+      - name: quarter
+        expr: quarter
+        data_type: number
+      - name: month
+        expr: month
+        data_type: number
+      - name: monthname
+        expr: monthname
+        data_type: varchar
+      - name: weekofyear
+        expr: weekofyear
+        data_type: number
+      - name: day
+        expr: day
+        data_type: number
+      - name: dayname
+        expr: dayname
+        data_type: varchar
+      - name: isweekend
+        expr: isweekend
+        data_type: boolean
+
+relationships:
+  - name: customer_to_salesdashboard
+    left_table: dim_customer
+    right_table: v_salesdashboard_customhealthtab
+    relationship_columns:
+      - left_column: hk_h_customer
+        right_column: hk_h_customer
+    join_type: left_outer
+    relationship_type: one_to_one
+
+  - name: invoice_to_salesdashboard
+    left_table: dim_invoice
+    right_table: v_salesdashboard_customhealthtab
+    relationship_columns:
+      - left_column: hk_h_invoice
+        right_column: hk_h_invoice
+    join_type: left_outer
+    relationship_type: one_to_one
+
+  - name: generator_to_salesdashboard
+    left_table: dim_generator
+    right_table: v_salesdashboard_customhealthtab
+    relationship_columns:
+      - left_column: hk_h_generator
+        right_column: hk_h_generator
+    join_type: left_outer
+    relationship_type: one_to_one
+
+  - name: salesworker_to_salesdashboard
+    left_table: dim_salesworker
+    right_table: v_salesdashboard_customhealthtab
+    relationship_columns:
+      - left_column: hk_h_salesworker
+        right_column: hk_h_salesworker
+    join_type: left_outer
+    relationship_type: one_to_one
+
+  - name: sourcesystem_to_salesdashboard
+    left_table: dim_sourcesystem
+    right_table: v_salesdashboard_customhealthtab
+    relationship_columns:
+      - left_column: hk_h_sourcesystem
+        right_column: hk_h_sourcesystem
+    join_type: left_outer
+    relationship_type: many_to_one
+
+  - name: worker_to_salesdashboard
+    left_table: dim_worker
+    right_table: v_salesdashboard_customhealthtab
+    relationship_columns:
+      - left_column: hk_h_worker
+        right_column: hk_h_worker
+    join_type: left_outer
+    relationship_type: one_to_one
+
+  - name: date_to_salesdashboard
+    left_table: DIMDATE
+    right_table: v_salesdashboard_customhealthtab
+    relationship_columns:
+      - left_column: FULLDATE
+        right_column: INVOICEDATE
+    join_type: left_outer
+    relationship_type: one_to_one
+
+verified_queries:
+  - name: "total revenue by customer"
+    question: "What is the total revenue generated by each customer?"
+    verified_at: 1720262400
+    verified_by: ASHIK
+    sql: "
+SELECT
+  c.customername,
+  SUM(v.invoice_amount) AS total_revenue
+FROM
+  dim_customer c
+  JOIN v_salesdashboard_customhealthtab v ON c.hk_h_customer = v.hk_h_customer
+GROUP BY
+  c.customername
+ORDER BY
+  total_revenue DESC;
+"
+
+  - name: "top customers by revenue"
+    question: "Who are the top 10 customers by total revenue?"
+    verified_at: 1720262400
+    verified_by: ASHIK
+    sql: "
+SELECT
+  c.customername,
+  SUM(v.invoice_amount) AS total_revenue
+FROM
+  dim_customer c
+  JOIN v_salesdashboard_customhealthtab v ON c.hk_h_customer = v.hk_h_customer
+GROUP BY
+  c.customername
+ORDER BY
+  total_revenue DESC
+LIMIT 10;
+"
+
+  - name: "total revenue by salesworker"
+    question: "What is the total revenue generated by each salesworker?"
+    verified_at: 1720262400
+    verified_by: ASHIK
+    sql: "
+SELECT
+  s.employeename,
+  SUM(v.invoice_amount) AS total_revenue
+FROM
+  dim_salesworker s
+  JOIN v_salesdashboard_customhealthtab v ON s.hk_h_salesworker = v.hk_h_salesworker
+GROUP BY
+  s.employeename
+ORDER BY
+  total_revenue DESC;
+"
+
+  - name: "total revenue by generator"
+    question: "What is the total revenue generated by each generator?"
+    verified_at: 1720262400
+    verified_by: ASHIK
+    sql: "
+SELECT
+  g.generatorname,
+  SUM(v.invoice_amount) AS total_revenue
+FROM
+  dim_generator g
+  JOIN v_salesdashboard_customhealthtab v ON g.hk_h_generator = v.hk_h_generator
+GROUP BY
+  g.generatorname
+ORDER BY
+  total_revenue DESC;
+"
+
+  - name: "total revenue by worker"
+    question: "What is the total revenue generated by each worker?"
+    verified_at: 1720262400
+    verified_by: ASHIK
+    sql: "
+SELECT
+  w.workername,
+  SUM(v.invoice_amount) AS total_revenue
+FROM
+  dim_worker w
+  JOIN v_salesdashboard_customhealthtab v ON w.hk_h_worker = v.hk_h_worker
+GROUP BY
+  w.workername
+ORDER BY
+  total_revenue DESC;
+"
+
+  - name: "total revenue by source system"
+    question: "What is the total revenue generated by each source system?"
+    verified_at: 1720262400
+    verified_by: ASHIK
+    sql: "
+SELECT
+  s.sourcesystem,
+  SUM(v.invoice_amount) AS total_revenue
+FROM
+  dim_sourcesystem s
+  JOIN v_salesdashboard_customhealthtab v ON s.hk_h_sourcesystem = v.hk_h_sourcesystem
+GROUP BY
+  s.sourcesystem
+ORDER BY
+  total_revenue DESC;
+"
+
+  - name: "total revenue by date"
+    question: "What is the total revenue generated on each date?"
+    verified_at: 1720262400
+    verified_by: ASHIK
+    sql: "
+SELECT
+  d.date,
+  SUM(v.invoice_amount) AS total_revenue
+FROM
+  DIMDATE d
+  JOIN v_salesdashboard_customhealthtab v ON d.FullDate = v.INVOICEDATE
+GROUP BY
+  d.date
+ORDER BY
+  d.date DESC;
+"
+
+  - name: "total revenue by month"
+    question: "What is the total revenue generated in each month?"
+    verified_at: 1720262400
+    verified_by: ASHIK
+    sql: "
+SELECT
+  d.monthname,
+  d.year,
+  SUM(v.invoice_amount) AS total_revenue
+FROM
+  DIMDATE d
+  JOIN v_salesdashboard_customhealthtab v ON d.FullDate = v.INVOICEDATE
+GROUP BY
+  d.monthname, d.year
+ORDER BY
+  d.year DESC, d.month DESC;
+"
+
+  - name: "total revenue by weekday"
+    question: "What is the total revenue generated on each day of the week?"
+    verified_at: 1720262400
+    verified_by: ASHIK
+    sql: "
+SELECT
+  d.dayname,
+  SUM(v.invoice_amount) AS total_revenue
+FROM
+  DIMDATE d
+  JOIN v_salesdashboard_customhealthtab v ON d.FullDate = v.INVOICEDATE
+GROUP BY
+  d.dayname
+ORDER BY
+  total_revenue DESC;
+"
+
+  - name: "total revenue by quarter"
+    question: "What is the total revenue generated in each quarter?"
+    verified_at: 1720262400
+    verified_by: ASHIK
+    sql: "
+SELECT
+  d.quarter,
+  d.year,
+  SUM(v.invoice_amount) AS total_revenue
+FROM
+  DIMDATE d
+  JOIN v_salesdashboard_customhealthtab v ON d.FullDate = v.INVOICEDATE
+GROUP BY
+  d.quarter, d.year
+ORDER BY
+  d.year DESC, d.quarter DESC;
+"
+
+  - name: "weekend vs. weekday revenue"
+    question: "What is the total revenue generated on weekends vs. weekdays?"
+    verified_at: 1720262400
+    verified_by: ASHIK
+    sql: "
+SELECT
+  CASE WHEN d.isweekend THEN 'Weekend' ELSE 'Weekday' END AS day_type,
+  SUM(v.invoice_amount) AS total_revenue
+FROM
+  DIMDATE d
+  JOIN v_salesdashboard_customhealthtab v ON d.FullDate = v.INVOICEDATE
+GROUP BY
+  day_type
+ORDER BY
+  total_revenue DESC;
+"

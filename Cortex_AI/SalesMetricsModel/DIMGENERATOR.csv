@@ -1,0 +1,21 @@
+HK_H_GENERATOR,EPANUMBER,GENERATORID,GENERATORNAME,HUBRECORDSOURCE,LOCCODE,SOURCESYSTEM_ID,STATUS,TYPE
+1,EPA12345,3001,Generator A,Source1,LOC001,1,Active,TypeX
+2,EPA12346,3002,Generator B,Source2,LOC002,2,Inactive,TypeY
+3,EPA12347,3003,Generator C,Source3,LOC003,3,Active,TypeX
+4,EPA12348,3004,Generator D,Source1,LOC004,1,Inactive,TypeY
+5,EPA12349,3005,Generator E,Source2,LOC005,2,Active,TypeX
+6,EPA12350,3006,Generator F,Source3,LOC006,3,Inactive,TypeY
+7,EPA12351,3007,Generator G,Source1,LOC007,1,Active,TypeX
+8,EPA12352,3008,Generator H,Source2,LOC008,2,Inactive,TypeY
+9,EPA12353,3009,Generator I,Source3,LOC009,3,Active,TypeX
+10,EPA12354,3010,Generator J,Source1,LOC010,1,Inactive,TypeY
+11,EPA12355,3011,Generator K,Source2,LOC011,2,Active,TypeX
+12,EPA12356,3012,Generator L,Source3,LOC012,3,Inactive,TypeY
+13,EPA12357,3013,Generator M,Source1,LOC013,1,Active,TypeX
+14,EPA12358,3014,Generator N,Source2,LOC014,2,Inactive,TypeY
+15,EPA12359,3015,Generator O,Source3,LOC015,3,Active,TypeX
+16,EPA12360,3016,Generator P,Source1,LOC016,1,Inactive,TypeY
+17,EPA12361,3017,Generator Q,Source2,LOC017,2,Active,TypeX
+18,EPA12362,3018,Generator R,Source3,LOC018,3,Inactive,TypeY
+19,EPA12363,3019,Generator S,Source1,LOC019,1,Active,TypeX
+20,EPA54321,3020,Generator T,Source3,LOC020,3,Inactive,TypeY

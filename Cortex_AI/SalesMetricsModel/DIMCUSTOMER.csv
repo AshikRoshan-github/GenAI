@@ -1,0 +1,21 @@
+HK_H_CUSTOMER,SOURCESYSTEM_ID,CUSTOMERID,CUSTOMERNAME,CUSTOMERTYPE,ADDRESS1,CITY,STATE,ZIP,COUNTRY,PHONE,FAX,TERMS,CUSTOMERWEBSITE,CUSTOMERSTATUS,BILLTOCUSTNAME,BILLTOADDR1,BILLTOADDR2,BILLTOCITY,BILLTOSTATE,BILLTOZIP,BILLTOCOUNTRY,AXCUSTOMERID,AXINVOICECUSTID,LOCATION,HUBRECORDSOURCE
+1,1,5001,Customer A,Residential,123 Main St,CityA,StateA,12345,USA,123-456-7890,,30,www.customerA.com,Active,BillTo A,456 Main St,,CityB,StateB,54321,USA,1001,2001,North,Source1
+2,1,5002,Customer B,Commercial,456 Side St,CityB,StateB,67890,USA,234-567-8901,,45,www.customerB.com,Active,BillTo B,789 Side St,,CityC,StateC,87654,USA,1002,2002,South,Source1
+3,1,5003,Customer C,Industrial,789 Front St,CityC,StateC,34567,USA,345-678-9012,,60,www.customerC.com,Inactive,BillTo C,321 Back St,,CityD,StateD,76543,USA,1003,2003,East,Source2
+4,2,5004,Customer D,Residential,321 Market St,CityD,StateD,45678,USA,456-789-0123,,30,www.customerD.com,Active,BillTo D,654 Market St,,CityE,StateE,65432,USA,1004,2004,West,Source2
+5,2,5005,Customer E,Commercial,654 Park St,CityE,StateE,56789,USA,567-890-1234,,45,www.customerE.com,Inactive,BillTo E,987 Park St,,CityF,StateF,54321,USA,1005,2005,North,Source3
+6,3,5006,Customer F,Industrial,987 Hill St,CityF,StateF,67890,USA,678-901-2345,,60,www.customerF.com,Active,BillTo F,123 Hill St,,CityG,StateG,43210,USA,1006,2006,South,Source3
+7,3,5007,Customer G,Residential,123 River St,CityG,StateG,78901,USA,789-012-3456,,30,www.customerG.com,Inactive,BillTo G,456 River St,,CityH,StateH,32109,USA,1007,2007,East,Source1
+8,1,5008,Customer H,Commercial,456 Valley St,CityH,StateH,89012,USA,890-123-4567,,45,www.customerH.com,Active,BillTo H,789 Valley St,,CityI,StateI,21098,USA,1008,2008,West,Source1
+9,1,5009,Customer I,Industrial,789 Canyon St,CityI,StateI,90123,USA,901-234-5678,,60,www.customerI.com,Inactive,BillTo I,321 Canyon St,,CityJ,StateJ,10987,USA,1009,2009,North,Source2
+10,2,5010,Customer J,Residential,321 Meadow St,CityJ,StateJ,01234,USA,012-345-6789,,30,www.customerJ.com,Active,BillTo J,654 Meadow St,,CityK,StateK,09876,USA,1010,2010,South,Source2
+11,2,5011,Customer K,Commercial,654 Creek St,CityK,StateK,12345,USA,123-456-7890,,45,www.customerK.com,Inactive,BillTo K,987 Creek St,,CityL,StateL,87654,USA,1011,2011,East,Source3
+12,3,5012,Customer L,Industrial,987 Spring St,CityL,StateL,23456,USA,234-567-8901,,60,www.customerL.com,Active,BillTo L,123 Spring St,,CityM,StateM,76543,USA,1012,2012,West,Source3
+13,3,5013,Customer M,Residential,123 Autumn St,CityM,StateM,34567,USA,345-678-9012,,30,www.customerM.com,Inactive,BillTo M,456 Autumn St,,CityN,StateN,65432,USA,1013,2013,North,Source1
+14,1,5014,Customer N,Commercial,456 Winter St,CityN,StateN,45678,USA,456-789-0123,,45,www.customerN.com,Active,BillTo N,789 Winter St,,CityO,StateO,54321,USA,1014,2014,South,Source1
+15,1,5015,Customer O,Industrial,789 Summer St,CityO,StateO,56789,USA,567-890-1234,,60,www.customerO.com,Inactive,BillTo O,321 Summer St,,CityP,StateP,43210,USA,1015,2015,East,Source2
+16,2,5016,Customer P,Residential,321 Lake St,CityP,StateP,67890,USA,678-901-2345,,30,www.customerP.com,Active,BillTo P,654 Lake St,,CityQ,StateQ,32109,USA,1016,2016,West,Source2
+17,2,5017,Customer Q,Commercial,654 Pond St,CityQ,StateQ,78901,USA,789-012-3456,,45,www.customerQ.com,Inactive,BillTo Q,987 Pond St,,CityR,StateR,21098,USA,1017,2017,North,Source3
+18,3,5018,Customer R,Industrial,987 Brook St,CityR,StateR,89012,USA,890-123-4567,,60,www.customerR.com,Active,BillTo R,123 Brook St,,CityS,StateS,10987,USA,1018,2018,South,Source3
+19,3,5019,Customer S,Residential,123 Ocean St,CityS,StateS,90123,USA,901-234-5678,,30,www.customerS.com,Inactive,BillTo S,456 Ocean St,,CityT,StateT,09876,USA,1019,2019,East,Source1
+20,3,5020,Customer T,Commercial,456 Bay St,CityT,StateT,01234,USA,012-345-6789,,45,www.customerT.com,Active,BillTo T,789 Bay St,,CityU,StateU,87654,USA,1020,2020,West,Source1
