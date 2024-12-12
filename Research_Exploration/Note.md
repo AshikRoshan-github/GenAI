@@ -1,2 +1,0 @@
-**The Research_Exploration folder is used for testing and experimenting with generative AI concepts. It contains trials, prototypes, and ideas related to exploring AI-driven solutions and innovations.
-**
