@@ -77,5 +77,3 @@ Output: Excel file and Streamlit display of the results.
 Architecture Diagram (Simplified):
 
 ![image](https://github.com/user-attachments/assets/6b1fdc4e-01b8-4d74-b4ec-7b565d9d0e9b)
-
-HTML-internationalization:
