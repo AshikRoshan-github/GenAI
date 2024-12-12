@@ -1,3 +1,6 @@
+**apify_qa.py :**
+
+
 The Python code uses Langchain, Apify, and a vector database to answer questions based on crawled website content. Here's a breakdown of the architecture:
 
 1. Environment Setup:
@@ -62,3 +65,60 @@ Architecture Diagram:
                  |  Output:       |    |  Output:         |       Input: Query,
                  |  DocumentLoader|    |  VectorStore     |
                  +----------------+    +------------------+
+
+**web_data_extractor.py**:
+
+The code performs structured information extraction from a web page using Langchain, Beautiful Soup, and an LLM (likely OpenAI's GPT). Here's an architectural breakdown:
+
+1. Web Page Loading:
+
+Input: A URL (https://www.gadgets360.com/mobile-recharge-plans/airtel-prepaid).
+
+Process: AsyncChromiumLoader loads the web page content using a headless browser. This allows it to handle dynamically loaded content.
+
+Output: A list of Document objects, each containing the HTML content of the loaded page. In this case, it's likely a single Document as only one URL is provided.
+
+2. HTML Parsing and Tag Extraction:
+
+Input: The list of Document objects from the previous step.
+
+Process: BeautifulSoupTransformer parses the HTML content and extracts specific tags. Here, it's configured to extract <tr> (table row) tags, likely to target the table containing recharge plan information.
+
+Output: A list of Document objects, now containing only the extracted <tr> tags' content.
+
+3. Text Splitting:
+
+Input: The transformed Document objects (containing <tr> tag content).
+
+Process: RecursiveCharacterTextSplitter splits the extracted HTML content into smaller chunks. This is done to manage the context window limitations of the LLM. The from_tiktoken_encoder method ensures efficient splitting based on token counts.
+
+Output: A list of Document objects, where each document represents a chunk of the original HTML content.
+
+4. Schema Definition:
+
+Process: A JSON schema is defined to specify the structure of the information to be extracted. The schema defines the expected fields ("Airtel Recharge Plans," "Data," "Validity," "Price") and their data types. The descriptions provide guidance to the LLM about what information should be extracted for each field.
+
+5. Information Extraction (LLM-powered):
+
+Input:
+
+A chunk of HTML content ( splits[0].page_content - the first chunk from the split documents).
+
+The defined JSON schema.
+
+Process:
+
+The create_extraction_chain function creates an extraction chain using the provided schema and an LLM (llm, which needs to be initialized with an appropriate LLM instance). This chain uses the LLM to extract the specified fields from the HTML chunk based on the schema's guidance.
+
+Output: A dictionary containing the extracted information, structured according to the schema.
+
+Architecture Diagram:
+
++------------+    +--------------+    +--------------+    +---------+    +-----------------+    +--------------+
+| Load Web  |--->| Extract <tr> |--->| Split Text  |--->| Define  |--->| Extract Info  |--->| Extracted   |
+| Page      |    | Tags        |    | Chunks      |    | Schema  |    | (LLM)       |    | Data        |
+|           |    |            |    |            |    +---------+    +-----------------+    +--------------+
+|           |    +--------------+    +--------------+                      |
+|  Input:   |       Input: Docs      Input: Docs    |                       Input: HTML Chunk,
+|    URL    |                                         |                                Schema     
++------------+                                         
